@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> kareem's </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="home">
+    <div class="page-shell">
+      <header class="hero-card">
+        <h1>إدارة العملاء</h1>
+        <p>أضف عميلًا جديدًا ثم افتح صفحة التفاصيل الخاصة به بكل سهولة.</p>
+        <button id="addClientBtn" class="primary-btn">+ إضافة عميل</button>
+      </header>
+
+      <section id="clientFormPanel" class="form-panel hidden">
+        <form id="clientForm" class="card-form">
+          <h2>إضافة عميل جديد</h2>
+          <label>
+            اسم العميل
+            <input
+              type="text"
+              name="name"
+              placeholder="اكتب اسم العميل"
+              required
+            />
+          </label>
+          <label>
+            العنوان
+            <input type="text" name="address" placeholder="اكتب العنوان" />
+          </label>
+          <label>
+            رقم الهاتف
+            <input type="tel" name="phone" placeholder="اكتب رقم الهاتف" />
+          </label>
+          <label>
+            فلتر
+            <select name="filter">
+              <option value="0">فلتر 1</option>
+              <option value="1">فلتر 2</option>
+              <option value="2">فلتر 3</option>
+              <option value="3">فلتر 4</option>
+              <option value="4">فلتر 5</option>
+              <option value="5">فلتر 6</option>
+              <option value="6">فلتر 7</option>
+            </select>
+          </label>
+          <label>
+            التاريخ
+            <input type="date" name="startDate" />
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="primary-btn">تم</button>
+            <button type="button" id="cancelFormBtn" class="secondary-btn">
+              إلغاء
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="clients-section">
+        <h2>العملاء المسجلون</h2>
+        <div id="homeReminderBanner" class="reminder-banner hidden"></div>
+        <input
+          id="clientSearch"
+          class="search-box"
+          type="text"
+          placeholder="ابحث عن عميل..."
+        />
+        <div id="clientsList" class="clients-list"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
